@@ -3,7 +3,7 @@
 Plugin Name: Easy Digital Downloads - FIO převod
 Plugin URL: https://cleverstart.cz
 Description: Umožní automatické provedení platby, kde se zákazníkovi ukáže číslo účtu, na které má zaplatit. Po zaplacení se platba spáruje
-Version: 2.2.92
+Version: 2.2.93
 Author: Pavel Janíček
 Author URI: https://cleverstart.cz
 */
@@ -586,7 +586,7 @@ function eddfio_edd_email_tag_swift_eur( $payment_id ) {
 function eddfio_edd_email_tag_celkem_s_menou($payment_id){
 	$payment = new EDD_Payment($payment_id);
 	$payment_amount 	= round($payment->total,2);
-	$payment_meta = get_post_meta( $variabilni, '_edd_payment_meta', true );
+	$payment_meta = get_post_meta( $payment_id, '_edd_payment_meta', true );
 	$currency = $payment_meta['currency'];
 	return $payment_amount." ". $currency;
 }
