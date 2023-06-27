@@ -1,0 +1,6 @@
+{
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^4.9",
+        "mhujer/fio-api-php": "^4.1"
+    }
+}
